@@ -251,6 +251,7 @@ const RegistrationForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <h1>User Registration</h1>
       <label>
         Username:
         <input type="text" name="username" value={formData.username} onChange={handleChange} required />

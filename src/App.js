@@ -1,15 +1,17 @@
 import './App.css';
 import React from 'react';
-import Header from './Components/Header';
-import RegistrationForm from './Components/RegistrationForm';
+import Home from './Pages/Home';
+import Login from './Pages/Login';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div>
-      <Header/>
-      <h1>User Registration</h1>
-      <RegistrationForm />
-    </div>
+    <BrowserRouter>
+      <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/login" element={<Login/>} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

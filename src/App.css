@@ -40,7 +40,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px;
+  padding: 0px 40px;
+  border-bottom: 0.5px solid black;
 }
 
 header > nav > ul {
