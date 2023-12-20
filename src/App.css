@@ -34,3 +34,27 @@
     transform: translateX(-100%);
   }
 }
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+header > nav > ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+#login {
+  background-color: #00d094;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+#login:hover {
+  background-color: #019e71;
+}
