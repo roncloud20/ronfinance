@@ -1,8 +1,8 @@
 // RegistrationForm.js
-// RegistrationForm.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import Select from 'react-select';
+import Header from '../Components/Header';
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -250,56 +250,68 @@ const RegistrationForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>User Registration</h1>
-      <label>
-        Username:
-        <input type="text" name="username" value={formData.username} onChange={handleChange} required />
-      </label>
-      <br />
-      <label>
-        Email:
-        <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-      </label>
-      <br />
-      <label>
-        Country:
-        <Select
-          options={countries}
-          value={formData.country}
-          onChange={handleCountryChange}
-          placeholder="Select Country"
-        />
-      </label>
-      <br />
-      <label>
-        Phone Number:
-        <input
-          type="tel"
-          name="phoneNumber"
-          value={formData.phoneNumber}
-          onChange={handlePhoneNumberChange}
-          required
-        />
-      </label>
-      <br />
-      <label>
-        Password:
-        <input type="password" name="password" value={formData.password} onChange={handleChange} required />
-      </label>
-      <br />
-      <label>
-        Confirm Password:
-        <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} required />
-      </label>
-      <br />
-      <label>
-        <input type="checkbox" name="agreeToTerms" checked={formData.agreeToTerms} onChange={handleChange} required />
-        I agree to the Terms and Conditions
-      </label>
-      <br />
-      <button type="submit">Register</button>
-    </form>
+    <>
+      <Header/>
+      <form onSubmit={handleSubmit}>
+        <h1>Create an Account</h1>
+        <label>
+          Username <sup>*</sup>
+          <input type="text" name="username" value={formData.username} onChange={handleChange} required />
+        </label>
+        <br />
+        <label>
+          Email <sup>*</sup>
+          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+        </label>
+        <br />
+        <label>
+          Country <sup>*</sup>
+          <Select
+            options={countries}
+            value={formData.country}
+            onChange={handleCountryChange}
+            placeholder="Select Country"
+          />
+        </label>
+        <br />
+        <div id="content">
+          <label>
+            Phone Number <sup>*</sup>
+            <input
+              type="text"
+              name="phoneCode"
+              value={formData.country ? formData.country.phoneCode : ''}
+              readOnly
+              style={{ width: '50px', marginLeft: '10px' }}
+            />
+            <input
+              type="tel"
+              name="phoneNumber"
+              value={formData.phoneNumber}
+              onChange={handlePhoneNumberChange}
+              required
+            />
+          </label>
+        </div>
+        <br />
+        <label>
+          Password <sup>*</sup>
+          <input type="password" name="password" value={formData.password} onChange={handleChange} required />
+        </label>
+        <br />
+        <label>
+          Confirm Password <sup>*</sup>
+          <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} required />
+        </label>
+        <br />
+        <label>
+          <input type="checkbox" name="agreeToTerms" checked={formData.agreeToTerms} onChange={handleChange} required />
+          I agree to the Terms and Conditions
+        </label>
+        <br />
+        <button type="submit">Register</button>
+      </form>
+    </>
   );
 };
 

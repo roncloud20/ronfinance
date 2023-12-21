@@ -59,3 +59,35 @@ header > nav > ul {
 #login:hover {
   background-color: #019e71;
 }
+
+/* All Forms */
+form {
+  margin: 10px 20%;
+  background-color: white;
+  border-radius: 20px;
+  border: 0.5px black solid;
+  padding: 20px;
+  display: flex;
+  flex-flow:column;
+  overflow: hidden;
+}
+
+input {
+  display: inline-block;
+  min-width: 96.2%;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 6px 12px;
+  text-align: start;
+  color: #212529;
+}
+
+sup {
+  color: red;
+}
+
+#content {
+  display: flex;
+  width: 100%;
+}
