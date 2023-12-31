@@ -1,3 +1,12 @@
+/* CSS Reset */
+* {box-sizing: border-box;}
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #6b777f;
+}
+
 /* CryptoPriceList.css */
 .crypto-item {
   display: inline-block;
@@ -60,6 +69,21 @@ header > nav > ul {
   background-color: #019e71;
 }
 
+/* Banner */
+.banner {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.banner h1 {
+  font-family: "Anek Telugu", sans-serif;
+  font-size: 56.9143px;
+  line-height: 60.7275px;
+  color: #0c263a;
+}
+
 /* All Forms */
 form {
   margin: 10px 20%;
@@ -72,22 +96,36 @@ form {
   overflow: hidden;
 }
 
-input {
-  display: inline-block;
-  min-width: 96.2%;
-  font-family: "Maven Pro", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  padding: 6px 12px;
-  text-align: start;
-  color: #212529;
-}
-
 sup {
   color: red;
 }
 
-#content {
-  display: flex;
+input[type=text], input[type=email], input[type=tel], input[type=password], select, textarea {
   width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit], button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
 }

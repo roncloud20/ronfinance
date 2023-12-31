@@ -256,12 +256,26 @@ const RegistrationForm = () => {
         <h1>Create an Account</h1>
         <label>
           Username <sup>*</sup>
-          <input type="text" name="username" value={formData.username} onChange={handleChange} required />
+          <input 
+            type="text" 
+            name="username" 
+            value={formData.username} 
+            onChange={handleChange} 
+            placeholder='Enter username'
+            required 
+          />
         </label>
         <br />
         <label>
           Email <sup>*</sup>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+          <input 
+            type="email" 
+            name="email" 
+            value={formData.email} 
+            onChange={handleChange} 
+            placeholder='Enter email address'
+            required 
+          />
         </label>
         <br />
         <label>
@@ -275,33 +289,49 @@ const RegistrationForm = () => {
         </label>
         <br />
         <div id="content">
-          <label>
+          <div className='phone'>
             Phone Number <sup>*</sup>
             <input
               type="text"
               name="phoneCode"
               value={formData.country ? formData.country.phoneCode : ''}
               readOnly
-              style={{ width: '50px', marginLeft: '10px' }}
+              style={{ width: '70px', backgroundColor: 'gray', marginLeft: '10px' }}
+              placeholder='Zip Code'
             />
             <input
               type="tel"
               name="phoneNumber"
               value={formData.phoneNumber}
               onChange={handlePhoneNumberChange}
+              style={{ width: '72.2%'}}
+              placeholder='Enter Phone Number'
               required
             />
-          </label>
+          </div>
         </div>
         <br />
         <label>
           Password <sup>*</sup>
-          <input type="password" name="password" value={formData.password} onChange={handleChange} required />
+          <input 
+            type="password" 
+            name="password" 
+            value={formData.password} 
+            onChange={handleChange}
+            placeholder='Enter Password' 
+            required 
+          />
         </label>
         <br />
         <label>
           Confirm Password <sup>*</sup>
-          <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} required />
+          <input 
+            type="password" 
+            name="confirmPassword" 
+            value={formData.confirmPassword} 
+            onChange={handleChange}
+            placeholder='Confirm Password' 
+            required />
         </label>
         <br />
         <label>
